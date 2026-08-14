@@ -1,0 +1,337 @@
+/* ─────────────────────────────────────────
+   LinkUp Hero Section — Startup Minimal CSS
+   Inspired by: Stripe · Linear · Notion
+───────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ── Root / tokens ── */
+.lu-hero {
+    --lu-purple: #7c3aed;
+    --lu-purple-mid: #9d5cf6;
+    --lu-purple-light: #ede9fe;
+    --lu-pink: #db2777;
+    --lu-text: #111827;
+    --lu-muted: #6b7280;
+    --lu-border: rgba(124, 58, 237, 0.14);
+    --lu-card-bg: rgba(255, 255, 255, 0.72);
+    --lu-shadow: 0 8px 48px rgba(124, 58, 237, 0.10);
+    --lu-font: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(145deg, #f8f5ff 0%, #fdfcff 45%, #fff 100%);
+    font-family: var(--lu-font);
+    overflow: hidden;
+}
+
+/* ── Layer 1: Particles (absolute, inset-0, z-index 0) ── */
+.lu-particles {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ── Layer 2: Thin gradient overlay for text readability ── */
+.lu-hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(ellipse 80% 60% at 30% 50%,
+            rgba(255, 255, 255, 0.55) 0%,
+            transparent 70%);
+}
+
+/* ── Soft radial glow (right side, behind card, z-index 2) ── */
+.lu-hero__glow {
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 640px;
+    height: 640px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(167, 139, 250, 0.22) 0%, rgba(216, 180, 254, 0.10) 50%, transparent 75%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* ── Container ── */
+.lu-hero__container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 64px;
+    width: 100%;
+}
+
+/* ─────────────────────────────────────────
+   LEFT: Content
+───────────────────────────────────────── */
+
+.lu-hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+/* Badge */
+.lu-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    background: var(--lu-purple-light);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--lu-purple);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    user-select: none;
+}
+
+.lu-badge__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--lu-purple);
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.18);
+}
+
+/* Headline */
+.lu-headline {
+    font-size: clamp(40px, 5vw, 62px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--lu-text);
+    margin: 0 0 24px 0;
+}
+
+.lu-headline__gradient {
+    background: linear-gradient(130deg, var(--lu-purple) 0%, var(--lu-pink) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Subtext */
+.lu-subtext {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--lu-muted);
+    max-width: 460px;
+    margin: 0 0 40px 0;
+    font-weight: 400;
+}
+
+/* CTA */
+.lu-cta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+/* Buttons */
+.lu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--lu-font);
+    cursor: pointer;
+    border: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.lu-btn--primary {
+    background: var(--lu-purple);
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.lu-btn--primary:hover {
+    background: #6d28d9;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(124, 58, 237, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.lu-btn--primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 12px rgba(124, 58, 237, 0.3);
+}
+
+.lu-btn--secondary {
+    background: transparent;
+    color: var(--lu-purple);
+    border: 1.5px solid rgba(124, 58, 237, 0.35);
+    box-shadow: none;
+}
+
+.lu-btn--secondary:hover {
+    background: var(--lu-purple-light);
+    border-color: rgba(124, 58, 237, 0.55);
+    transform: translateY(-2px);
+}
+
+.lu-btn--secondary:active {
+    transform: translateY(0);
+}
+
+/* Trust line */
+.lu-trust {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--lu-muted);
+    font-weight: 400;
+}
+
+.lu-trust strong {
+    color: var(--lu-text);
+    font-weight: 600;
+}
+
+.lu-trust__avatars {
+    display: flex;
+    align-items: center;
+}
+
+.lu-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-right: -8px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+/* ─────────────────────────────────────────
+   RIGHT: Glass card + illustration
+───────────────────────────────────────── */
+
+.lu-hero__visual {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.lu-card {
+    background: var(--lu-card-bg);
+    border-radius: 20px;
+    border: 1px solid rgba(124, 58, 237, 0.12);
+    box-shadow:
+        0 2px 0 rgba(255, 255, 255, 0.9) inset,
+        0 12px 48px rgba(124, 58, 237, 0.10),
+        0 2px 8px rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 28px 24px 20px;
+    width: 100%;
+    max-width: 520px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    will-change: transform;
+}
+
+.lu-card:hover {
+    box-shadow:
+        0 2px 0 rgba(255, 255, 255, 0.9) inset,
+        0 24px 64px rgba(124, 58, 237, 0.16),
+        0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.lu-card__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 12px;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* ─────────────────────────────────────────
+   Responsive
+───────────────────────────────────────── */
+
+@media (max-width: 900px) {
+    .lu-hero__container {
+        grid-template-columns: 1fr;
+        padding: 80px 24px;
+        gap: 48px;
+        text-align: left;
+    }
+
+    .lu-hero__visual {
+        justify-content: center;
+    }
+
+    .lu-card {
+        max-width: 420px;
+    }
+
+    .lu-subtext {
+        max-width: 100%;
+    }
+
+    .lu-hero__glow {
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .lu-headline {
+        font-size: 36px;
+    }
+
+    .lu-subtext {
+        font-size: 16px;
+    }
+
+    .lu-hero__container {
+        padding: 64px 20px;
+        gap: 40px;
+    }
+
+    .lu-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .lu-btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .lu-card {
+        padding: 20px 16px 14px;
+    }
+}

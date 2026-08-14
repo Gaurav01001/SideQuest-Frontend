@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* Link Up design tokens */
+@layer base {
+    :root {
+        --background: #f8f9fa;
+        --foreground: #1a1a2e;
+        --primary: #6c63ff;
+        --card: rgba(255, 255, 255, 0.15);
+    }
+
+    .dark {
+        --background: #1a1a2e;
+        --foreground: #f8f9fa;
+        --primary: #a78bfa;
+        --card: rgba(0, 0, 0, 0.15);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: var(--background);
+        color: var(--foreground);
+        font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    }
+}
+
+/* ─── Auth / Login dark-theme tokens ─────────────────────── */
+:root {
+    --color-bg: #101214;
+    --color-surface: #161A1D;
+    --color-muted-surface: #1D2125;
+    --color-border: #2C333A;
+    --color-text-secondary: #596773;
+    --color-text-primary: #C7D1DB;
+    --color-heading: #DEE4EA;
+    --color-bg-2: #C7D1DB;
+    --color-text-primary-rgb: 199, 209, 219;
+}
+
+@keyframes lu-spin {
+    to { transform: rotate(360deg); }
+}

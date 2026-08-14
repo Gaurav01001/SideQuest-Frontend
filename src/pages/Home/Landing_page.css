@@ -1,0 +1,151 @@
+/* ── Landing Page ────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Root – full-screen white centered column */
+.lp-root {
+    min-height: 100vh;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px 56px;
+    font-family: 'Inter', sans-serif;
+    gap: 0;
+}
+
+/* ── Logo ─────────────────────────────────────────────── */
+.lp-logo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    margin-bottom: 4px;
+    gap: 10px;
+}
+
+.lp-logo-link {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #7b1c1c;
+    letter-spacing: -1px;
+    font-weight: 400;
+}
+
+.lp-logo-up {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.1rem;
+    color: #a63232;
+    letter-spacing: 1px;
+    font-weight: 400;
+    /* margin-top: -8px; */
+}
+
+/* ── Illustration ─────────────────────────────────────── */
+.lp-illustration {
+    width: 100%;
+    max-width: 340px;
+    margin: 8px 0 28px;
+}
+
+.lp-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ── Text ─────────────────────────────────────────────── */
+.lp-text {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.lp-headline {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: -0.3px;
+    margin-bottom: 14px;
+}
+
+.lp-sub {
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* ── CTA ──────────────────────────────────────────────── */
+.lp-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 340px;
+    gap: 10px;
+}
+
+.lp-btn-signup {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: #111827;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.lp-btn-signup:hover {
+    background: #1f2937;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    transform: translateY(-1px);
+}
+
+.lp-btn-signup:active {
+    transform: translateY(0);
+}
+
+.lp-or {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.lp-btn-signin {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.lp-btn-signin:hover {
+    color: #2563eb;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 400px) {
+    .lp-logo-link {
+        font-size: 2.4rem;
+    }
+
+    .lp-logo-up {
+        font-size: 1.7rem;
+    }
+
+    .lp-headline {
+        font-size: 1.45rem;
+    }
+}
