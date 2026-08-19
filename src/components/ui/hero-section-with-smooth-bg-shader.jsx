@@ -10,6 +10,7 @@ export function HeroSection({
     description = "IDK why I'm making this but if you like it please give me an Internship",
     primaryButtonText = "Get Started",
     secondaryButtonText = "Learn More",
+    secondaryHref = "https://portfolio-1-jade-omega.vercel.app/",
     onPrimaryClick,
     onSecondaryClick,
     className = "",
@@ -43,8 +44,8 @@ export function HeroSection({
         if (onPrimaryClick) onPrimaryClick()
         else navigate("/feed")
     }
-    const handleSecondary = () => {
-        if (onSecondaryClick) onSecondaryClick()
+    const handleSecondary = (e) => {
+        if (onSecondaryClick) onSecondaryClick(e)
     }
 
     return (
@@ -92,9 +93,21 @@ export function HeroSection({
                                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </button>
-                        <button className="lu-btn lu-btn--secondary" onClick={handleSecondary}>
-                            {secondaryButtonText}
-                        </button>
+                        {secondaryHref ? (
+                            <a
+                                href={secondaryHref}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="lu-btn lu-btn--secondary"
+                                onClick={handleSecondary}
+                            >
+                                {secondaryButtonText}
+                            </a>
+                        ) : (
+                            <button className="lu-btn lu-btn--secondary" onClick={handleSecondary}>
+                                {secondaryButtonText}
+                            </button>
+                        )}
                     </div>
 
                     {/* Trust line */}

@@ -35,7 +35,7 @@ const QuestFeed = () => {
       <div className="flex">
         <Sidebar />
 
-        <main className="flex-1 max-w-2xl mx-auto px-4 py-8">
+        <main className="flex-1 max-w-2xl mx-auto px-4 py-6 sm:py-8 pb-24 md:pb-8">
           <div className="mb-6">
             <h2 className="text-2xl font-bold mb-2 text-[#1A1916] dark:text-[#F0EEE9] font-sans">
               Quest Feed

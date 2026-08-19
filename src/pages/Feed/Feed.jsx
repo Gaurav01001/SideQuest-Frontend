@@ -14,7 +14,7 @@ const Feed = () => {
     <div className="min-h-screen bg-[#FAFAF8] dark:bg-[#141412] text-[#1A1916] dark:text-[#F0EEE9] transition-colors duration-200">
       <Navbar />
 
-      <main className="max-w-2xl mx-auto px-4 py-8">
+      <main className="max-w-2xl mx-auto px-4 py-6 sm:py-8 pb-24 md:pb-8">
         <h2 className="text-xl font-bold mb-6 text-[#1A1916] dark:text-[#F0EEE9] font-sans">Quest Feed</h2>
 
         {loading && posts.length === 0 ? (

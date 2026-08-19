@@ -280,19 +280,26 @@
 ───────────────────────────────────────── */
 
 @media (max-width: 900px) {
+    .lu-hero {
+        min-height: auto;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
     .lu-hero__container {
         grid-template-columns: 1fr;
-        padding: 80px 24px;
-        gap: 48px;
+        padding: 48px 24px;
+        gap: 40px;
         text-align: left;
     }
 
     .lu-hero__visual {
         justify-content: center;
+        width: 100%;
     }
 
     .lu-card {
-        max-width: 420px;
+        max-width: 460px;
     }
 
     .lu-subtext {
@@ -302,36 +309,62 @@
     .lu-hero__glow {
         right: 50%;
         transform: translate(50%, -50%);
-        width: 400px;
-        height: 400px;
+        width: 340px;
+        height: 340px;
     }
 }
 
 @media (max-width: 600px) {
-    .lu-headline {
-        font-size: 36px;
-    }
-
-    .lu-subtext {
-        font-size: 16px;
+    .lu-hero {
+        padding-top: 24px;
+        padding-bottom: 40px;
     }
 
     .lu-hero__container {
-        padding: 64px 20px;
-        gap: 40px;
+        padding: 32px 16px;
+        gap: 32px;
+    }
+
+    .lu-badge {
+        font-size: 10px;
+        padding: 5px 12px;
+        margin-bottom: 20px;
+    }
+
+    .lu-headline {
+        font-size: clamp(28px, 8.5vw, 40px);
+        margin-bottom: 16px;
+        line-height: 1.15;
+    }
+
+    .lu-subtext {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 28px;
     }
 
     .lu-cta {
         flex-direction: column;
         width: 100%;
+        gap: 12px;
+        margin-bottom: 24px;
     }
 
     .lu-btn {
         justify-content: center;
         width: 100%;
+        padding: 13px 20px;
+        font-size: 14px;
+    }
+
+    .lu-trust {
+        font-size: 13px;
+        flex-wrap: wrap;
     }
 
     .lu-card {
-        padding: 20px 16px 14px;
+        padding: 16px 12px 12px;
+        border-radius: 16px;
+        max-width: 100%;
     }
 }

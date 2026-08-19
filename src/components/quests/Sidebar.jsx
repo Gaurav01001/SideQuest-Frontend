@@ -72,7 +72,7 @@ const Sidebar = () => {
 
   return (
     <aside 
-      className={`h-[calc(100vh-60px)] sticky top-[60px] p-4 bg-white dark:bg-[#1E1E1B] border-r border-[#E8E6E1] dark:border-[#312F2C] flex flex-col justify-between transition-all duration-300 ease-in-out select-none ${
+      className={`h-[calc(100vh-60px)] sticky top-[60px] p-4 bg-white dark:bg-[#1E1E1B] border-r border-[#E8E6E1] dark:border-[#312F2C] hidden md:flex flex-col justify-between transition-all duration-300 ease-in-out select-none flex-shrink-0 ${
         isCollapsed ? 'w-20' : 'w-64'
       }`}
     >

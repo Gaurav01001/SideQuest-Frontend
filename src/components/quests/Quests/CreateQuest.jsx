@@ -212,7 +212,7 @@ const CreateQuest = () => {
         <Sidebar />
 
         {/* Form Container Column */}
-        <main className="flex-1 max-w-2xl mx-auto px-4 py-8">
+        <main className="flex-1 max-w-2xl mx-auto px-4 py-6 sm:py-8 pb-24 md:pb-8">
           {isSubmitted ? (
             /* Google Form Success Confirmation State */
             <div className="space-y-4">

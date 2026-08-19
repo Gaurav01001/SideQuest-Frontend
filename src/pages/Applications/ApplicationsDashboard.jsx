@@ -123,11 +123,11 @@ const ApplicationsDashboard = () => {
         <Sidebar />
 
         {/* Dashboard Main Content Container */}
-        <main className="flex-1 max-w-4xl mx-auto px-6 py-8">
+        <main className="flex-1 max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8 pb-24 md:pb-8">
           
           {/* Header Description */}
-          <div className="mb-8">
-            <h1 className="text-3xl font-extrabold text-[#1A1916] dark:text-[#F0EEE9] tracking-tight">
+          <div className="mb-6 sm:mb-8">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1A1916] dark:text-[#F0EEE9] tracking-tight">
               Applications Dashboard
             </h1>
             <p className="text-sm text-[#6B6860] dark:text-[#9E9B95] mt-1.5">
@@ -136,7 +136,7 @@ const ApplicationsDashboard = () => {
           </div>
 
           {/* Aggregated Metric Cards Row */}
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
             <div className="bg-white dark:bg-[#1E1E1B] p-4 rounded-[16px] border border-[#E8E6E1] dark:border-[#312F2C] shadow-xs border-l-4 border-l-[#FF6B47]">
               <span className="block text-[10px] uppercase font-bold text-[#6B6860] dark:text-[#9E9B95] tracking-wider mb-1">
                 Your Quests

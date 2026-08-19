@@ -229,18 +229,17 @@ export function AuthCard({ children, imageSrc, rightPanel }) {
 
     return (
         <div
-            className="flex w-full max-w-6xl rounded-2xl overflow-hidden"
+            className="flex flex-col lg:flex-row w-full max-w-6xl rounded-2xl overflow-hidden shadow-2xl"
             style={{
                 background: 'var(--color-surface)',
                 border: '1px solid rgba(0,0,0,0.08)',
                 boxShadow: '0 20px 60px rgba(0,0,0,0.18), 0 4px 16px rgba(0,0,0,0.08)',
-                minHeight: '620px',
+                minHeight: 'auto',
             }}
         >
-            {/* Left: form – 45% */}
+            {/* Left: form – full width on mobile, 45% on large screens */}
             <div
-                className="relative overflow-hidden flex items-center justify-center"
-                style={{ width: '45%', flexShrink: 0 }}
+                className="relative overflow-hidden flex items-center justify-center w-full lg:w-[45%] flex-shrink-0"
                 onMouseMove={handleMove}
                 onMouseEnter={() => setHovering(true)}
                 onMouseLeave={() => setHovering(false)}
@@ -256,7 +255,7 @@ export function AuthCard({ children, imageSrc, rightPanel }) {
                         transition: 'transform 0.1s ease-out, opacity 0.3s',
                     }}
                 />
-                <div className="relative z-10 w-full px-8 md:px-12 py-10">
+                <div className="relative z-10 w-full px-6 sm:px-8 md:px-12 py-8 sm:py-10">
                     {children}
                 </div>
             </div>
